@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main() {
+	float IVA, AFP, salario, total;
+	cout<<"ingrese el salario del cual desea calcular: ";
+	cin>>salario;
+	IVA=salario*0.13;
+	AFP=salario*0.121;
+	total=(salario-IVA-AFP);
+	cout<<"el salario bruto a pagar es de: "<<total<<endl;
+	getch();
+}
