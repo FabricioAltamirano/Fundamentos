@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main() {
+	float N,P;
+	cout<<"ingrese el valor de N: ";
+	cin>>N;
+	P=1;
+	for(int i=1;i<=N;i++)
+		P=P*i;
+	cout<<"el resultado del producto es: "<<P<<endl;
+	getch();
+}
