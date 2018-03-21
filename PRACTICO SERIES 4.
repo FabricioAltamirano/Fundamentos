@@ -1,0 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main() {
+	float N, S, X=1;
+	cout<<"ingrese el valor N: ";
+	cin>>N;
+	S=0;
+	for(int i=1;i<=N;i++)
+		if(i%2==0)
+		{S=S+(i*-X);}
+		else
+		S=S+(i*X);
+	cout<<"el valor de la suma es: "<<S<<endl;
+	getch();
+}
