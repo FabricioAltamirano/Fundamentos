@@ -1,0 +1,15 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main(){
+float N, fact;
+cout<<"ingrese N: ";
+cin>>N;
+fact=1;
+for(int i=1;i<=N;i++)
+	fact=fact*i;
+cout<<"el valor del factorial es: "<<fact<<endl;
+getch();
+}
+
