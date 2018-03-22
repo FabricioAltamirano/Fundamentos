@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main(){
+float N,S,X,fact;
+cout<<"ingrese el valor de N: ";
+cin>>N;
+cout<<"ingrese el valor de x: ";
+cin>>X;
+fact=1;
+S=0;
+for(int i=1;i<=N;i++)
+	{fact=fact*i;
+S= S+(pow(X,i))/fact;}
+cout<<"el valor de la suma es: "<<S<<endl;
+getch();
+}
