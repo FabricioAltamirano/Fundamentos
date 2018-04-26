@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+float fac(int n);
+int main(){
+	int n;
+	cout<<"ingres el valor de n: ";
+	cin>>n;
+	cout<<"el valor del factorial es: "<<fac(n)<<endl;
+	getch();
+}
+float fac(int n)
+{int x;
+x=1;
+for(int i=1;i<=n;i++)
+	x=x*i;
+return x;
+}
