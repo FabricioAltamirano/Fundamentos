@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+float poten(float x, float y);
+int main(){
+	float a,b;
+	cout<<"ingrese el numero a: ";
+	cin>>a;
+	cout<<"ingrese el numero b: ";
+	cin>>b;
+	cout<<"la potencia es:"<<poten(a,b)<<endl;
+	getch();
+}
+float poten(float x, float y)
+{ float pot;
+pot=pow(x,y);
+return pot;
+}
