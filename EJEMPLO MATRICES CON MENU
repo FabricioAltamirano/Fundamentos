@@ -1,0 +1,84 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#define MAX 20
+using namespace std;
+void mostrarmat(int MAT[MAX][MAX],int m,int n);
+void cargarmat(int MAT[MAX][MAX],int m,int n);
+float promedio(int Mat[MAX][MAX],int m,int n);
+int mayor(int MAT[MAX][MAX],int m,int n);
+
+void main(){
+	int matriz[MAX][MAX],fil,col,may,opc;
+	float prom;
+	do{
+		cout<<"ingrese el numero de filas: ";
+		cin>>fil;
+	}while((fil<=0) || (fil>MAX));
+	do{ 
+		cout<<"ingrese el numero de columnas: ";
+		cin>>col;
+	}while((col<=0) || (col>MAX));
+	//MENU
+	do{
+		cout<<"menu"<<endl;
+		cout<<"(1) cargar matriz"<<endl;
+		cout<<"(2) mostrar matriz"<<endl;
+		cout<<"(3) promedio matriz"<<endl;
+		cout<<"(4) mayor matriz"<<endl;
+		cout<<"(0) salir "<<endl;
+		cout<<"ingrese una opcion: "<<endl;
+		cin>>opc;
+		switch(opc){
+		case 1: cargarmat(matriz,fil,col);
+			break;
+		case 2: mostrarmat(matriz,fil,col);
+			break;
+		case 3: prom=promedio(matriz,fil,col);
+			break;
+		case 4: cout<<"el mayor es: "<< mayor(matriz,fil,col);
+			break;
+		case 0: cout<<"salir";
+			break;
+		default: cout<<"error de opcion";
+			break;
+		}
+		getch();
+		system("cls"); //limpia la pantalla y funciona stdlib
+	}while (opc!=0);
+}
+
+
+ void mostrarmat(int MAT[MAX][MAX],int m,int n){
+	 	 for(int i=0;i<m;i++)
+		 for(int j=0;j<n;j++)
+		 {cout<<"MAT["<<i<<"]["<<j<<"]= "<<endl;
+	      cout<<MAT[i][j]<<endl;
+ }
+ }
+ void cargarmat(int MAT[MAX][MAX],int m,int n){
+	 for(int i=0;i<m;i++)
+		 for(int j=0;j<n;j++)
+		 {cout<<"MAT["<<i<<"]["<<j<<"]= ";
+	      cin>>MAT[i][j];
+ }
+ }
+
+ float promedio(int Mat[MAX][MAX],int m,int n)
+ {   float prom,sum=0;
+	 for(int i=0;i<m;i++)
+	 {for(int j=0;j<n;j++)
+	  sum=sum+ Mat[i][j];
+	 }
+	prom=(sum/(m*n));
+	return prom;
+ }
+int mayor(int MAT[MAX][MAX],int m,int n){
+	int may=MAT[0][0];
+	for(int i=0;i<m;i++)
+	for(int j=0;j<n;j++)
+	 if(MAT[i][j]>may)
+		 may=MAT[i][j];
+	return may;
+}
