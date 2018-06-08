@@ -1,0 +1,40 @@
+// BUBLESORT.cpp 
+#include "stdafx.h"
+#define Nmax 100
+void LeerVector(int*V, int N);
+void ImprimaVec(int*V, int N);
+ void Swap(int &A,int &B);
+ void BubleSort(int*V,int N);
+int main(void)
+{ int N,A[Nmax];
+	printf("Tamaño vector A:");scanf("%d", &N);
+	LeerVector(A, N);
+	void Swap(int &A,int &B);
+	 BubleSort(A,N);
+	 ImprimaVec(A,N);
+	return 0;
+}
+void LeerVector(int*V, int N)
+{ int i;
+	for(i=0;i<N;i++)
+	{printf("V[%d]",i);
+	scanf("%d",&V[i]);}
+}
+ void BubleSort(int*A,int N)
+ {int k,i;
+ for(k=0;k <N-1;k++)
+ {for(i=0;i<N-1-k;i++)
+ if(A[i]>A[i+1])
+ {Swap(A[i],A[i+1]);}}
+ }
+void Swap(int &A,int &B)
+{int aux;
+aux=A;
+A=B;
+B=aux;
+}
+void ImprimaVec(int*V, int N)
+{ int i;
+	for(i=0;i<N;i++)
+	{printf(" V[%d]: %d \n",i,V[i]);}
+}
